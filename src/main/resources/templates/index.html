@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administración de empleados</title>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+</head>
+<body>
+	<nav class="navbar navbar-light bg-white">
+		<div class="container">
+			<a class="navbar-brand" href="#"> <img
+				th:src="@{/img/logo_general_de_equipos.jpg}"
+				alt="logo general de equipos" width="259px" height="auto"
+				class="d-inline-block align-text-top"> <span
+				class="visually-hidden">General de equipos</span>
+			</a>
+		</div>
+	</nav>
+	<div class="container">
+		<h2>Empleados</h2>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Apellido</th>
+					<th scope="col">Correo</th>
+					<th scope="col">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row" th:text="${id}"></th>
+					<td th:text="${name}"></td>
+					<td th:text="${lastName}"></td>
+					<td th:text="${email}"></td>
+					<td>
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-outline-primary">Editar</button>
+							<button type="button" class="btn btn-outline-danger">Eliminar</button>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
